@@ -32,8 +32,7 @@
         :name="name"
         :disabled="isDisabled"
         tabindex="-1">
-    </span>
-    <span class="el-radio__label">
+    </span><span class="el-radio__label">
       <slot></slot>
       <template v-if="!$slots.default">{{label}}</template>
     </span>
@@ -99,7 +98,7 @@ export default {
     },
     radioSize() {
       const temRadioSize = this.size || this._zFormItemSize
-      return this.isGroup ? this._radioGroup.size || temRadioSize : temRadioSize
+      return this.isGroup ? this._radioGroup.radioGroupSize || temRadioSize : temRadioSize
     },
     isDisabled() {
       return this.isGroup ? this._radioGroup.disabled || this.disabled || (this.zFrom || {}).disabled : this.disabled || (this.zFrom || {}).disabled

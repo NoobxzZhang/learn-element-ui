@@ -7,8 +7,9 @@ import Col from '@/components/basic/layout/col/index.js'
 // form
 import Radio from '@/components/form/radio/index.js'
 import RadioGroup from '@/components/form/radio-group/index.js'
+import RadioButton from '@/components/form/radio-button/index.js'
 
-const components = [Button, ButtonGroup, Row, Col, Radio, RadioGroup]
+const components = [Button, ButtonGroup, Row, Col, Radio, RadioGroup, RadioButton]
 
 const install = (Vue, opt = {}) => {
   components.map(component => {
@@ -23,6 +24,7 @@ export const a = {
   Row,
   Col,
   Radio,
-  RadioGroup
+  RadioGroup,
+  RadioButton
 }
 export default a
